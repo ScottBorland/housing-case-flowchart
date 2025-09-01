@@ -31,15 +31,15 @@ function DateHeaderNode({ data }: NodeProps<DateHeaderNodeType>) {
         position: 'relative',
         padding: '10px 16px',
         borderRadius: 14,
-        background: 'rgba(0, 63, 114, 1)',
-        color: 'white',
+        background: '#FACC15',
+        color: '#422006',
         fontWeight: 600,
-        fontSize: 14,
+        fontSize: 18,
         textAlign: 'center',
-        border: '2px solid #020e35ff',
-        boxShadow: '0 6px 14px rgba(37,99,235,0.25)',
+        border: '2px solid #EAB308',
+        // boxShadow: '0 6px 14px #c1c48fff',
         minWidth: 250,
-        pointerEvents: 'none', // label-like
+        pointerEvents: 'none', 
       }}
     >
       {display ? `📅 ${display}` : ''}

@@ -37,7 +37,7 @@ function CaseHeader({ caseId, customerId, officer, created, closed }: CaseHeader
         alignItems: 'center',
       }}
     >
-      <div style={{ fontWeight: 800, fontSize: 16, letterSpacing: 0.2 }}>Case Overview</div>
+      <div style={{ fontWeight: 800, fontSize: 13, letterSpacing: 0.2 }}>Case Overview</div>
       <div><strong>Case ID:</strong> {caseId}</div>
       <div><strong>Customer ID:</strong> {customerId}</div>
       <div><strong>Officer ID:</strong> {officer}</div>

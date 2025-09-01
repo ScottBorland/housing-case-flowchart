@@ -2,6 +2,7 @@
 import type { Node, Edge } from '@xyflow/react';
 import type { DateHeaderData } from './components/DateHeaderNode.js';
 import type { HorizontalNodeData } from './components/HorizontalNode.js';
+import type { CaseInfoFloatingData } from './components/CaseInfoFloatingNode.js';
 
 
 import { MarkerType } from '@xyflow/react';
@@ -37,6 +38,21 @@ export function createNodesFromJson(caseData: any): { nodes: AnyNode[]; edges: E
   const xGap = 600;      // horizontal gap between date columns
   const yGap = 120;      // vertical gap between stacked decisions
   const headerOffset = 140;
+
+  nodes.push({
+    id: 'case-floating',
+    type: 'caseInfoMovable',
+    position: {x: xPos+80, y: baseY-100},
+    data:{
+      caseId: Case_information.Case_Id,
+      customerId: Case_information.CustomerId,
+      officer: Case_information['Case_AssignedTo$Officer$'],
+      created: Case_information.Case_DateCreated,
+      closed: Case_information.Case_DateClosed ?? '',
+    },
+    draggable: true,
+    selectable: true
+  })
 
   let prevDecisionId: string | null = null;
   xPos += xGap;

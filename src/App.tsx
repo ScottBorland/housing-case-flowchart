@@ -21,6 +21,7 @@ import casesData from './SampleCases.json' with { type: 'json' };
 import HorizontalNode from './components/HorizontalNode.js';
 import DateHeaderNode from './components/DateHeaderNode.js';
 import CaseHeader from './components/CaseHeader.js';
+import CaseInfoFloatingNode from './components/CaseInfoFloatingNode.js';
 
 // If you typed your node data unions elsewhere, you can import and use them.
 // For simplicity we keep Node/Edge un-parameterized here.
@@ -97,6 +98,7 @@ export default function App() {
 
   const nodeTypes = useMemo(
     () => ({
+      caseInfoMovable: CaseInfoFloatingNode,
       horizontal: HorizontalNode,
       dateHeader: DateHeaderNode,
     }),
@@ -170,7 +172,7 @@ export default function App() {
         </select>
       </div>
 
-      {/* Case header card */}
+      {/* Case header card
       {info && (
         <CaseHeader
           caseId={info.Case_Id ?? ''}
@@ -179,10 +181,10 @@ export default function App() {
           created={info.Case_DateCreated ?? ''}
           closed={info.Case_DateClosed ?? ''}
         />
-      )}
+      )} */}
 
       {/* Graph */}
-      <div style={{ flex: 1 }}>
+      <div style={{ flex: 1, backgroundColor: '#1e293b' }}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -199,7 +201,7 @@ export default function App() {
         >
           <Controls />
           <MiniMap />
-          <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
+          <Background variant={BackgroundVariant.Dots} gap={30} size={1} color='#94a3b8' />
         </ReactFlow>
       </div>
     </div>

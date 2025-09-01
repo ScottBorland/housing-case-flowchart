@@ -22,7 +22,7 @@ function HorizontalNode({ data }: NodeProps<HorizontalNodeType>) {
   let color = 'black';
 
   if (data.decisionType?.toLowerCase() === 'prevention') {
-    background = 'rgb(64, 59, 101)';  // purple
+    background = 'rgba(80, 136, 199, 1)';  // purple
     border = 'rgb(45, 41, 75)';       // darker border variant
     color = 'white';
   } else if(data.decisionType?.toLowerCase() === 'relief') {
