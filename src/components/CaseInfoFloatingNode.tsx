@@ -31,7 +31,7 @@ function CaseInfoFloatingNode({ data }: NodeProps<CaseInfoFloatingType>) {
         padding: '18px 22px',
         borderRadius: 12,
         background: '#ffffff',          // pure white background
-        border: '2px solid #e5e7eb',    // light grey border (no glow)
+        border: '2px solid #0b132b',    // light grey border (no glow)
         boxShadow: 'none',              // remove glow
         minWidth: 280,
         fontSize: 20,                   // larger text for details
@@ -44,7 +44,7 @@ function CaseInfoFloatingNode({ data }: NodeProps<CaseInfoFloatingType>) {
           fontWeight: 700,
           fontSize: 24,                 // bigger font for title
           marginBottom: 12,
-          color: '#111827',             // slate-900 (almost black)
+          color: '#0b132b',             // slate-900 (almost black)
         }}
       >
         Case Information

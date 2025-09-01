@@ -125,7 +125,7 @@ export default function App() {
           alignItems: 'center',
           gap: 8,
           padding: '8px 12px',
-          background: '#f1f5f9',
+          background: 'rgb(0, 90, 139)',
           borderBottom: '1px solid #cbd5e1',
         }}
       >
@@ -184,7 +184,7 @@ export default function App() {
       )} */}
 
       {/* Graph */}
-      <div style={{ flex: 1, backgroundColor: '#1e293b' }}>
+      <div style={{ flex: 1, backgroundColor: 'white' }}>
         <ReactFlow
           nodes={nodes}
           edges={edges}
@@ -201,7 +201,7 @@ export default function App() {
         >
           <Controls />
           <MiniMap />
-          <Background variant={BackgroundVariant.Dots} gap={30} size={1} color='#94a3b8' />
+          <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
         </ReactFlow>
       </div>
     </div>

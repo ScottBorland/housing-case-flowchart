@@ -17,12 +17,12 @@ const hiddenHandleStyle: React.CSSProperties = {
 
 function HorizontalNode({ data }: NodeProps<HorizontalNodeType>) {
 
-  let background = 'white'; // default grey
-  let border = '#cbd5e1';
-  let color = 'black';
+  let background = '#F7F7F7'; // default grey
+  let border = '#0b132b';
+  let color = '#0b132b';
 
   if (data.decisionType?.toLowerCase() === 'prevention') {
-    background = 'rgba(80, 136, 199, 1)';  // purple
+    background = 'rgba(158, 60, 187, 1)';  // purple
     border = 'rgb(45, 41, 75)';       // darker border variant
     color = 'white';
   } else if(data.decisionType?.toLowerCase() === 'relief') {
